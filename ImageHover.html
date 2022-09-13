@@ -45,20 +45,20 @@
   <div class="emoji closed active">🙈</div>
   <div class="emoji open">🙉</div>
   <script>
-    const closedFace=document.querySelector('.closed')
-    const openFace=document.querySelector('.open')  
-    
+    const closedFace = document.querySelector('.closed')
+    const openFace = document.querySelector('.open')
+
     //add event listener
-    closedFace.addEventListener('click', ()=>{
-      if(openFace.classList.contains('open')){
+    closedFace.addEventListener('click', () => {
+      if (openFace.classList.contains('open')) {
         openFace.classList.add('active')
         closedFace.classList.remove('active')
       }
     })
-    openFace.addEventListener('click',()=>{
-      if(closedFace.classList.contains('closed')){
+    openFace.addEventListener('click', () => {
+      if (closedFace.classList.contains('closed')) {
         closedFace.classList.add('active')
-        openFace.classList.remove('active')
+        openFace.classList.remove('active');
       }
     })
   </script>
