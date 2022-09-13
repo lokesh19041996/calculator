@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Hover</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .emoji {
+      font-size: 10rem;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .closed {
+      display: none;
+    }
+
+    .open {
+      display: none;
+    }
+
+    .active {
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="emoji closed active">🙈</div>
+  <div class="emoji open">🙉</div>
+  <script>
+    const closedFace=document.querySelector('.closed')
+    const openFace=document.querySelector('.open')  
+    
+    //add event listener
+    closedFace.addEventListener('click', ()=>{
+      if(openFace.classList.contains('open')){
+        openFace.classList.add('active')
+        closedFace.classList.remove('active')
+      }
+    })
+    openFace.addEventListener('click',()=>{
+      if(closedFace.classList.contains('closed')){
+        closedFace.classList.add('active')
+        openFace.classList.remove('active')
+      }
+    })
+  </script>
+</body>
+
+</html>
